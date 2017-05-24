@@ -8,7 +8,7 @@ $eid = param('eid');
 $exid = param('sub');
 $op = param('op', 'view');
 
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 $isadmin = false;
 $uid = 0;
@@ -122,7 +122,7 @@ function make_lists($data) {
     global $xoopsDB;
     $eid = $data['eid'];
     $exid = $data['exid'];
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     if ($data['reservation'] && !empty($data['reserved'])) {
 	$show = array();
 	$item = array();
