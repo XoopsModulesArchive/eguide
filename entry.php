@@ -16,7 +16,7 @@ $member_only = ($xoopsModuleConfig['member_only']!=ACCEPT_EMAIL && $uid>0);
 
 if (isset($_POST['eid'])) {
     include 'reserv_func.php';
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
 
     $vals = get_opt_values($data['optfield'], $errs, false, false);
 

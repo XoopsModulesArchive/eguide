@@ -37,7 +37,7 @@ if (!function_exists("eventdate")) include_once $mydirpath."/functions.php";
 
 function b_event_top_show_base($dirname, $prefix, $options) {
     global $xoopsDB, $xoopsUser;
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
 	
     $now = time();
     list($detail, $nitem, $nlen, $list_type, $cat) = $options;

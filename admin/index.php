@@ -119,7 +119,7 @@ case 'resvCtrl':
 xoops_cp_header();
 include 'mymenu.php';
 
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 $tags = css_tags();
 
 switch ($op) {
@@ -342,7 +342,7 @@ xoops_cp_footer();
 
 function show_categories() {
     global $xoopsDB;
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $res = $xoopsDB->query('SELECT c.*,count(topicid) count, if (p.weight, p.weight, c.weight) ord1, if(p.weight IS NULL, -1, c.weight) ord2 FROM '.CATBL.' c LEFT JOIN '.CATBL.' p ON c.catpri=p.catid LEFT JOIN '.EGTBL.' ON c.catid=topicid GROUP BY c.catid ORDER BY ord1,ord2,c.catid');
 
     // display entries
@@ -408,7 +408,7 @@ function show_categories() {
 function edit_category($catid) {
     global $xoopsDB;
 
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     if ($catid) {
 	$res = $xoopsDB->query('SELECT * FROM '.CATBL." WHERE catid=$catid");
 	$data = $xoopsDB->fetchArray($res);

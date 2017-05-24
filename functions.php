@@ -77,7 +77,7 @@ function xss_filter($text) {
 function edit_eventdata(&$data) {
     global $xoopsModuleConfig, $xoopsUser;
 
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $str = $pat = array();
     $pat[] = '{X_DATE}';
     $str[] = $data['ldate'] =
@@ -146,7 +146,7 @@ function eventform($data, $uid) {
     global $xoopsUser, $xoopsModuleConfig;
     $poster = $uid?new XoopsUser($uid):$xoopsUser;
     $uid = is_object($poster)?$poster->getVar('uid'):0;
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
 
     if (empty($data['reservation'])) return null;
 

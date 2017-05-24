@@ -8,7 +8,7 @@ $rvid = param('rvid');
 $key = param('key');
 $now=time();
 $nlab = eguide_form_options('label_persons');
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 if ($xoopsModuleConfig['member_only']==ACCEPT_MEMBER && !is_object($xoopsUser)) {
     redirect_header(XOOPS_URL."/user.php",2,_NOPERM);
